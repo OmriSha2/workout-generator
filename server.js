@@ -10,7 +10,7 @@ app.post('/api/generate', (req, res) => {
   
   const body = JSON.stringify({
     model: 'claude-sonnet-4-20250514',
-    max_tokens: 1000,
+    max_tokens: 4000,
     messages: [{ role: 'user', content: prompt }]
   });
 
