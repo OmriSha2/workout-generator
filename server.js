@@ -37,7 +37,8 @@ app.post('/api/generate', (req, res) => {
         const plan = JSON.parse(clean);
         res.json({ plan });
       } catch(e) {
-        res.status(500).json({ error: 'שגיאה בעיבוד התשובה' });
+    console.error('Parse error:', e.message, 'Raw data:', data);
+    res.status(500).json({ error: 'שגיאה: ' + e.message });
       }
     });
   });
