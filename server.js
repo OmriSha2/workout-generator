@@ -3,7 +3,7 @@ const path = require('path');
 const app = express();
 
 app.use(express.json());
-app.use(express.static('public'));
+app.use(express.static(__dirname));
 
 // API proxy — מפתח נשמר בצד השרת, לא נחשף ללקוח
 app.post('/api/generate', async (req, res) => {
