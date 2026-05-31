@@ -168,6 +168,7 @@ async function generate(){
   const goal=document.getElementById('goal').value;
   const days=document.getElementById('days').value;
   const equipment=document.getElementById('equipment').value;
+  const duration=document.getElementById('duration').value;
 
   document.getElementById('btnGen').disabled=true;
   document.getElementById('errBox').style.display='none';
@@ -180,6 +181,7 @@ async function generate(){
 - מטרה: ${goal}
 - ימי אימון בשבוע: ${days}
 - ציוד: ${equipment}
+- משך כל אימון: ${duration}
 
 הנחיות:
 1. חלק כל אימון לחלקי גוף (פלג עליון / פלג תחתון / כל הגוף) לפי מספר הימים.
